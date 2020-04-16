@@ -11,7 +11,7 @@ import it.sistinf.crash.dicerest.service.RollService;
 @RequestMapping("/dice")
 public class RollController {
 
-    @GetMapping(value = "/one")
+    @GetMapping(value = "/one", produces = "application/json; charset=UTF-8")
     public Dice rollOne(){
         
         RollService rollService = new RollService();
@@ -22,9 +22,11 @@ public class RollController {
     }
 
     /* 
-    * AGGIUNGERE UN MAPPING DI TIPO GET PER LANCIARE IL DADO DUE VOLTE
-    * CHE ABBIA COME ENDPOINT "/TWO" E MODIFICARE LA RESPONSE PER STAMPARE
-    * I DUE RISULTATI OTTENUTI, AD ES: { "ROLL": "1", "VALUE": 3}
+    * AGGIUNGERE UN MAPPING DI TIPO GET PER LANCIARE IL DADO DUE VOLTE.
+    * - L'ENDPOINT DEVE ESSERE "/two".
+    * - MODIFICARE LA RESPONSE PER STAMPARE I DUE RISULTATI OTTENUTI, 
+    * AD ES: [{"value":3},{"value":4}]
     */
+    
 
 }
